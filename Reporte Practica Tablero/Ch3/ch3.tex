@@ -1,0 +1,48 @@
+\chapter{Conclusión}
+
+En primer lugar, he aprendido la importancia de la planificación y el diseño adecuado antes de comenzar a implementar una solución. Al enfrentar el desafío de representar un tablero de ajedrez en código, me di cuenta de que debía considerar cuidadosamente la estructura de datos y la forma en que se organizarían las piezas. Esto me enseñó a pensar en forma modular y a descomponer problemas complejos en partes más pequeñas y manejables.\newline
+
+Además, esta práctica me brindó una oportunidad valiosa para aplicar mis conocimientos de programación orientada a objetos (POO). Pude utilizar clases y objetos para representar las piezas de ajedrez y manipular sus atributos y comportamientos. A través de esta experiencia, comprendí mejor los conceptos fundamentales de la POO, como la encapsulación, la herencia y el polimorfismo.\newline
+
+También aprendí sobre la importancia de la abstracción y la claridad en el código. Al escribir el programa, me esforcé por utilizar nombres de variables y métodos descriptivos, lo que facilitó la comprensión y el mantenimiento del código en el futuro. Además, traté de evitar la duplicación de código y promoví la reutilización a través de la creación de funciones y métodos reutilizables.\newline
+
+Otra conclusión clave es el valor de las pruebas y la depuración. Durante el proceso de desarrollo, me encontré con algunos errores y comportamientos inesperados. Aprendí a utilizar técnicas de depuración, como la impresión de mensajes y la revisión del flujo de ejecución, para identificar y corregir estos problemas. También descubrí la importancia de escribir pruebas unitarias para validar el funcionamiento de mi código y garantizar su correcta ejecución en diferentes escenarios.\newline
+
+Por último, esta práctica me recordó la importancia de la paciencia y la perseverancia al enfrentar desafíos de programación. Hubo momentos en los que me sentí frustrado y bloqueado, pero aprendí a tomar descansos, buscar ayuda cuando fuera necesario y abordar los problemas paso a paso. Esto me enseñó a ser más resiliente y a mantener una mentalidad de resolución de problemas.\newline
+
+Probé mi solución en varios casos de prueba y obtuvimos resultados precisos y eficientes. Sin embargo, también noté que la complejidad temporal de mi solución puede aumentar considerablemente en laberintos grandes con muchas palabras objetivo. En futuros trabajos, podría explorar otras técnicas de búsqueda que puedan ser más eficientes en casos de laberintos grandes y complejos.\newline
+\\
+
+\section{Problemas iniciales}
+Durante la resolución de esta práctica del tablero de ajedrez, me encontré con varios problemas iniciales que debieron ser abordados para lograr una solución completa.\newline
+
+En primer lugar, tuve que definir la estructura y el diseño del programa, decidiendo cómo organizar el código en archivos separados y estableciendo la interacción con el usuario a través de menús. Esto implicó considerar cómo generar y mostrar los recorridos de las piezas.\newline
+
+Otro desafío importante fue la generación de los recorridos en sí. Cada pieza tiene reglas de movimiento específicas, por lo que fue necesario desarrollar algoritmos precisos y eficientes que tuvieran en cuenta posibles casos especiales, como los límites del tablero y la colisión con otras piezas.\newline
+
+Una vez generados los recorridos, fue crucial validar su validez. Esto significaba asegurarse de que las piezas no se salieran del tablero y que no se superpusieran entre sí. Para lograr esto, implementé una lógica adicional para verificar cada movimiento y descartar los recorridos inválidos.\newline
+
+Además, era importante representar visualmente los recorridos en el tablero de ajedrez. Esto requirió el uso de bibliotecas gráficas y la definición de la lógica para dibujar las piezas y las rutas de movimiento en la interfaz gráfica.\newline
+
+Por último, consideré la eficiencia y el rendimiento del programa. Algunos recorridos, como los mayores a 10, crecían exponencialmente, lo que generaba inconvenientes adversos.\newline
+
+\subsection{Soluciones}
+A continuación, se detallan las soluciones que se les dieron a dichos problemas:
+\begin{enumerate}
+    \item Estructura y diseño del programa: Se optó por organizar el código en archivos separados para mejorar la modularidad y la legibilidad. Se crearon funciones de menú para interactuar con el usuario y seleccionar la cantidad de piezas y el tipo de recorrido. Además, se utilizó un enfoque basado en subprocessos para invocar los diferentes archivos Python según las selecciones del usuario.\newline 
+
+    \item Generación de recorridos: Se implementaron algoritmos específicos para cada tipo de pieza (blanca y negra) que tuvieron en cuenta las reglas de movimiento de cada una. Se consideraron casos especiales, como la colisión con otras piezas, para generar recorridos válidos.\newline 
+    
+    \item Validación de recorridos: Se agregó lógica adicional para verificar la validez de los recorridos generados. En caso de detectar movimientos inválidos, se descartaron o ajustaron los recorridos correspondientes.\newline 
+    
+    \item Representación gráfica: Se utilizó una biblioteca gráfica, como Pygame, para mostrar visualmente los recorridos en el tablero de ajedrez. Se definió la lógica para dibujar las piezas y las rutas de movimiento en la interfaz gráfica, lo que permitió una representación clara y comprensible de los recorridos generados.\newline 
+    
+    \item Rendimiento y eficiencia: Se optimizó el código y los algoritmos para mejorar el rendimiento del programa, especialmente en casos donde las piezas tenían un gran número de movimientos posibles, como los recorridos mayores a 10, donde la solución fue un correcto almacenamiento de los recorridos y también su lectura. Se utilizaron técnicas de programación eficiente y se realizaron ajustes para evitar demoras excesivas en la generación y visualización de los recorridos.\newline 
+\end{enumerate}
+ \newline 
+\section{Complejidades}
+El algoritmo también incluye una función llamada $"$recorrer\_estados$"$ que genera todos los recorridos posibles en el juego del ajedrez. Esta función utiliza recursión para obtener los recorridos y es difícil determinar su complejidad exacta sin conocer la longitud máxima de los recorridos y el número de estados posibles. En el peor de los casos, la complejidad podría ser exponencial.\newline
+
+En cuanto a la función $"$seleccionar\_recorrido$"$, selecciona una línea aleatoria de un archivo que contiene los recorridos finales válidos. La complejidad de esta función depende del tamaño del archivo y es lineal en función del número de líneas en el archivo.\newline
+
+Básicamente, la complejidad del algoritmo del tablero de la práctica puede variar dependiendo de los detalles específicos y la longitud de los recorridos en el juego del ajedrez, sobretodo para recorridos como los mayores a 10, que crecen de manera exponencial.\newline
